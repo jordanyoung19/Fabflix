@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search</title>
+    <!-- include jquery autocomplete JS  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.devbridge-autocomplete/1.4.7/jquery.autocomplete.min.js"></script>
+
+    <!-- Bootstrap for CSS -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Search for movies</h1>
+
+<form id="search_form" method="get" action="#">
+  <label><b>Title: </b></label>
+  <label>
+    <input id="title" name="title" placeholder="Enter title" type="text" class="autocomplete-searchbox">
+  </label>
+  <br>
+  <label><b>Year: </b></label>
+  <label>
+    <input id="year" name="year" placeholder="Enter year" type="number">
+  </label>
+  <br>
+  <label><b>Director: </b></label>
+  <label>
+    <input id="director" name="director" placeholder="Enter director" type="text">
+  </label>
+  <br>
+  <label><b>Star Name: </b></label>
+  <label>
+    <input id="star" name="star-name" placeholder="Enter star name" type="text">
+  </label>
+  <br>
+  <input type="submit" value="submit">
+</form>
+
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
+<script src="search-movies.js"></script>
+
+</body>
+</html>

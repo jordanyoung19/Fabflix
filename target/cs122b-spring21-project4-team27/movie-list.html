@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Movie List</title>
+</head>
+<body>
+
+<h1>Movie List</h1>
+
+
+<!--        sort by rating drop down list-->
+<div id="sortByRating" class="btn-group">
+    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Sort by Rating
+        <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu" role="menu">
+        <li><a onclick="handlesort('rating', 'ascend')">ascend</a></li>
+        <li><a onclick="handlesort('rating', 'descend')">descend</a></li>
+    </ul>
+</div>
+
+<!--        sort by title drop down list-->
+<div id="sortByTitle" class="btn-group">
+    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Sort by Title
+        <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu" role="menu">
+        <li><a onclick="handlesort('title', 'ascend')">ascend</a></li>
+        <li><a onclick="handlesort('title', 'descend')">descend</a></li>
+    </ul>
+</div>
+
+
+<!--        select number of results drop down list-->
+<div id="itemNumber" class="btn-group">
+    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Item Number
+        <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu" role="menu">
+        <li><a onclick="handleNumItems('10')">10</a></li>
+        <li><a onclick="handleNumItems('25')">25</a></li>
+        <li><a onclick="handleNumItems('50')">50</a></li>
+        <li><a onclick="handleNumItems('100')">100</a></li>
+    </ul>
+</div>
+
+
+<!--        movie tables: DONE-->
+<table id=star_table class="table table-striped">
+    <thead>
+    <tr>
+        <th>Title</th>
+        <th>Year</th>
+        <th>Director</th>
+        <th>Genres</th>
+        <th>Stars</th>
+        <th>Rating</th>
+        <th>Add to Cart</th>
+    </tr>
+    </thead>
+    <tbody id=movie_list_body></tbody>
+</table>
+
+<a href="index.html">Return to main page</a>
+<br>
+<a href="shopping-cart.html"> Proceed to Shopping Cart</a>
+
+<!--        previous and next buttons-->
+
+<footer id=prevnext_footer>
+    <ul>
+        <button class='prev'><a onclick="handleprevnext(true)">Previous</a></button>
+        <!--        <button id=pagenum></button>-->
+        <button class='next'><a onclick="handleprevnext(false)">Next</a></button>
+    </ul>
+</footer>
+
+
+<!-- Load jQuery and Bootstrap JS -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="movie-list.js"></script>
+
+</body>
+</html>

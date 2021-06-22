@@ -1,0 +1,82 @@
+<!-- This page will be redirected from any url if you are not logged in -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Employee Dashboard</title>
+<!--    <script src='https://www.google.com/recaptcha/api.js'></script>-->
+</head>
+<body>
+<h2>Add a New Star</h2>
+<form id="new_star" action="#" method="post">
+    <label><b>Star Name</b></label>
+    <label>
+        <input name="starName" placeholder="Enter Star Name" type="text">
+    </label>
+    <br>
+    <label><b>Birth Year</b></label>
+    <label>
+        <input name="birthYear" placeholder="Enter Birth Year (optional)" type="text">
+    </label>
+    <br>
+    <input type="submit" value="Submit">
+</form>
+<div id="add_star_message"></div>
+
+<br>
+<br>
+<h2>Add a Movie</h2>
+<!-- Set the method to POST to avoid showing the username/password in the URL
+     The default action is disabled to allow your own implementation. -->
+<form id="new_movie" action="#" method="post">
+    <label><b>Title</b></label>
+    <label>
+        <input name="title" placeholder="Enter Title" type="text">
+    </label>
+    <br>
+    <label><b>Year</b></label>
+    <label>
+        <input name="year" placeholder="Enter Year" type="text">
+    </label>
+    <br>
+    <label><b>Director</b></label>
+    <label>
+        <input name="director" placeholder="Enter Director Name" type="text">
+    </label>
+    <br>
+    <label><b>Single Star</b></label>
+    <label>
+        <input name="singleStar" placeholder="Enter Star Name" type="text">
+    </label>
+    <br>
+    <label><b>Genre</b></label>
+    <label>
+        <input name="genre" placeholder="Enter Genre" type="text">
+    </label>
+    <br>
+    <input type="submit" value="Submit">
+</form>
+<div id="add_movie_message"></div>
+<br>
+<br>
+<table id=tables_table class="table table-striped">
+    <thead>
+    <tr>
+        <th>Table Name</th>
+        <th>Attribute</th>
+        <th>Data Type</th>
+    </tr>
+    </thead>
+    <tbody id=table_info_body></tbody>
+</table>
+<br>
+<a href="index.html">Return to main page</a>
+
+<!-- include jQuery-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!-- include our own JS file -->
+<!-- Need to rewrite JS file for dashboard logic -->
+<script src="./_dashboard.js"></script>
+
+</body>
+</html>
